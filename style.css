@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg , blue,violet);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.top{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column; 
+}
+.top h1{
+   margin-top: 2rem;
+   color: white;
+}
+
+.top p{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    
+}
+
+.container {
+    width: 60vmin;
+    height: 70vmin;
+    border-radius: 4px;
+    background-color: #293447;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-details {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    color: aliceblue;
+}
+
+.play-body {
+    width: 100%;
+    height: 100%;
+    background-color: #212837;
+    display: grid;
+    grid-template: repeat(25, 1fr)/repeat(25, 1fr);
+}
+
+ 
+.play-body .food {
+    background-color: rgb(255, 3, 3);
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 4px 1px white; */
+
+}
+
+.play-body .head {
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.play-body .snake {
+    background-color: rgb(0, 191, 255);
+    border-radius: 10px;
+}
+@media(width <=530px){
+    .container {
+        width: 70%;
+        height: 80vmin; 
+    }
+}
+
+
+.controls {
+    position: fixed;
+    bottom: 5px;
+    left: 0; 
+    display: none;
+    width: 100%; 
+}
+
+.control-btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 70px;
+    font-size: 20px;   
+}
+
+@media(width <=530px){
+    .controls {
+         display: flex; 
+         gap: 1px;
+         justify-content: center;
+    }
+}
