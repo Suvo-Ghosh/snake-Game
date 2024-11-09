@@ -17,20 +17,21 @@ body {
 
 }
 .top{
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column; 
 }
 .top h1{
-   margin-top: 2rem;
-   color: white;
+   margin-top: 3px;
+   color: white; 
 }
 
 .top p{
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: large;
     font-weight: 600;
+    color: white;
     
 }
 
@@ -42,6 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 .game-details {
@@ -65,32 +67,45 @@ body {
  
 .play-body .food {
     background-color: rgb(255, 3, 3);
-    border-radius: 10px;
+    border-radius: 3px;
     /* box-shadow: 0px 0px 4px 1px white; */
 
 }
 
 .play-body .head {
-    background-color: blue;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
 }
 
 .play-body .snake {
     background-color: rgb(0, 191, 255);
-    border-radius: 10px;
+    border-radius: 2px;
 }
-@media(width <=530px){
+@media(width <=600px){
     .container {
-        width: 70%;
-        height: 80vmin; 
+        width: 80%;
+        height: 85vmin; 
+        overflow: visible;
+    }
+}
+@media(width <=375px){
+    .top{
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+         
+    }
+     
+    .top p{
+        margin-bottom: 10px;
+        margin-top: 15px;
     }
 }
 
 
+
 .controls {
-    position: fixed;
-    bottom: 5px;
-    left: 0; 
+    position: absolute;
+    bottom: -22%; 
     display: none;
     width: 100%; 
 }
@@ -98,16 +113,22 @@ body {
 .control-btn {
     background-color: rgb(0, 0, 0);
     color: white;
-    border: none;
-    padding: 10px;
-    width: 70px;
-    font-size: 20px;   
+    border: none; 
+    width: 63px;
+    height: 63px;
+    font-size: 30px;   
 }
 
-@media(width <=530px){
+@media(width <=552px){
     .controls {
          display: flex; 
          gap: 1px;
          justify-content: center;
+    }
+}
+
+@media(width <=375px){
+    .controls { 
+        bottom: -30%; 
     }
 }
